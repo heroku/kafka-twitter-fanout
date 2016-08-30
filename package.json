@@ -1,0 +1,18 @@
+{
+  "name": "twitter-fanout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "bin/start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-bigint": "^0.2.0",
+    "lodash": "^4.15.0",
+    "no-kafka": "git://github.com/crcastle/kafka.git#3.0"
+  }
+}
