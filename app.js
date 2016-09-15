@@ -107,7 +107,7 @@ const dataHandler = function (messageSet, topic, partition) {
 // Configure consumer client
 const consumer = new Kafka.SimpleConsumer({
     idleTimeout: 100,
-    clientId: 'twitter-fanout',
+    clientId: 'twitter-fanout-consumer',
     connectionString: brokerUrls,
     ssl: {
       certFile: './client.crt',
@@ -117,7 +117,7 @@ const consumer = new Kafka.SimpleConsumer({
 
 // Configure producer client
 const producer = new Kafka.Producer({
-    clientId: 'tweet-cleaner-producer',
+    clientId: 'tweet-fanout-producer',
     connectionString: brokerUrls,
     ssl: {
       certFile: './client.crt',
