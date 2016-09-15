@@ -94,7 +94,7 @@ const dataHandler = function (messageSet, topic, partition) {
             // console.log('----> Sending tweet to topic', keyword);
             // console.log(tweet);
             return producer.send({
-                topic: keyword,
+                topic: `${keyword}-keyword`,
                 partition: 0,
                 message: {
                     value: JSONbig.stringify(tweet)
