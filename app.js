@@ -77,6 +77,14 @@ const dataHandler = function (messageSet, topic, partition) {
             if (tweetsNotFannedOutCount % 100 == 0) {
                 console.error('----> Tweets not fanned out:', tweetsNotFannedOutCount, 'out of', tweetCount);
             }
+
+            producer.send({
+                topic: 'unknown-keyword',
+                partition: 0,
+                message: {
+                    value: JSONbig.stringify(tweet)
+                }
+            })
         }
 
         // For each keyword, send the tweet a topic of the same name
