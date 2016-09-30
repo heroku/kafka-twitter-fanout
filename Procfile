@@ -1,1 +1,1 @@
-web: npm start
+fanout: npm start
