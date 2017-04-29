@@ -31,8 +31,8 @@ heroku create
 heroku addons:attach my-kafka-app::KAFKA
 # where my-kafka-app is the original app the kafka cluster was attached to
 
-heorku config:set TWITTER_TRACK_TERMS= # comma-separated list of terms being tracked
-heorku config:set KAFKA_TOPIC= # Kafka topic from which to consume messages
+heroku config:set TWITTER_TRACK_TERMS= # comma-separated list of terms being tracked
+heroku config:set KAFKA_TOPIC= # Kafka topic from which to consume messages
 
 git push heroku master
 ```
